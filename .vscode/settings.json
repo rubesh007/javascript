@@ -1,9 +1,0 @@
-{
-  "liveServer.settings.port": 5503,
-  "github.copilot.editor.enableCodeActions": true,
-  "javascript.referencesCodeLens.enabled": true,
-  "github.copilot.chat.generateTests.codeLens": true,
-  "github.copilot.editor.enableAutoCompletions": false,
-  "less.format.preserveNewLines": true,
-  "less.hover.documentation": true
-}

@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pop Ups</title>
-</head>
+  </head>
 
-<body></body>
+  <body></body>
 
-<script>
+  <script>
     /* Alert Popup */
 
     alert("Hi This is RubeshKuamr.S");
 
     /* prompt Popup */
 
-    prompt("Enter your Name")
+    prompt("Enter your Name");
 
     let input;
     input = prompt("Enter Your Age");
-    input = Number(input)
+    input = Number(input);
     console.log(typeof input);
 
     /* confirm Popup */
 
-    confirm("Are you Single?")
+    confirm("Are you Single?");
 
     let question;
     question = confirm("Are you 18?");
@@ -35,18 +34,16 @@
      whether the user name right or wrong 
     */
 
-    let userName = prompt("Enter Your Name")
-    let conformation = confirm(`Is your userName? ${userName}`)
-    console.log(conformation)
+    let userName = prompt("Enter Your Name");
+    let conformation = confirm(`Is your userName? ${userName}`);
+    console.log(conformation);
     if (conformation == true) {
-        alert(`Yes my userName is ${userName}`)
-    }
-    else {
-        alert(`No my userName is not ${userName}`)
+      alert(`Yes my userName is ${userName}`);
+    } else {
+      alert(`No my userName is not ${userName}`);
     }
 
     // Here i have used all of the three model windows to get input from the user and to confirm it
     // if you want you can use alert or else you can use console.log
-</script>
-
+  </script>
 </html>
