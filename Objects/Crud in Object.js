@@ -1,8 +1,8 @@
 /* Default Object */
 let Bat = {
-    brand: "MRF",
-    Type: "Strich Ball",
-    Weight: 2 + "kg",
+  brand: "MRF",
+  Type: "Strich Ball",
+  Weight: 2 + "kg",
 };
 console.log( Bat ); //{ brand: 'MRF', Type: 'Strich Ball', Weight: '2kg' }
 
@@ -11,9 +11,12 @@ console.log( Bat ); //{ brand: 'MRF', Type: 'Strich Ball', Weight: '2kg' }
 */
 
 /* Adding a property to Object */
-// by using { obejectName['key'] = Value } this syntax we can able to add a property to the Object
+// by using { obejectName['key'] = Value } this syntax we can able to add a property to the Object if the key is MultiWord 
 
-Bat[ 'Brand Ambassidor' ] = "Virat Kholi"; // for adding a new property the key must be inside [] with ''
+// by using { obejectName.key = Value } this syntax we can also able to add a property to the Object if the key is Not a MultiWord
+
+Bat[ 'Brand Ambassidor' ] = "Virat Kholi"; // for adding a new property if the key is MultiWord key must be inside [] with ''
+Bat.age = 22; // for adding a new property if the key is Not a MultiWord the key can be{ obejectName.key = Value }
 console.log( Bat );
 /* 
 {
@@ -21,6 +24,7 @@ console.log( Bat );
   Type: 'Strich Ball',
   Weight: '2kg',
   'Brand Ambassidor': 'Virat Kholi'
+  age: 22
 }
 */
 
@@ -29,6 +33,7 @@ console.log( Bat );
 // by using { delete object.key } this Syntax we can able to remove any particular property we want
 
 delete Bat.Weight;
+delete Bat.age;
 console.log( Bat );
 /* 
 {
@@ -51,6 +56,7 @@ console.log( Bat );
   brand: 'Ceat',
   Type: 'Strich Ball',
   'Brand Ambassidor': 'Rohit Sharma'
+
 }
 */
 
