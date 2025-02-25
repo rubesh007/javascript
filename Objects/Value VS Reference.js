@@ -2,6 +2,7 @@
 // Primitive value or DataTypes == (Number, String, Boolean, Null, Undefined, Symbol, BigInt)
 // Non-primitive DataTypes == (Objects, Arrays, Functions)
 
+
 //When you assign a primitive value to a variable, it creates a copy of that value. 
 // Changing the copied value will not change the original.
 
@@ -13,6 +14,8 @@ console.log( a, b ); // 24 ,24
 
 b = 30; // here Changing the copied value ( b ) will not change the original value ( a )
 console.log( a, b ); // 24 , 30
+
+//---------------------------------------------------------------------------------------------------------------------------
 
 /* Reference */
 // Non-primitive DataTypes == (Objects, Arrays, Functions) are stored in memory as references.
@@ -46,6 +49,23 @@ B = {}; // here if we assign B = {} it will work normally because,
 // Here it is not same object a = { name: 'Rubesh', age: 23 }, but for B we are assigning anoher object B ={}
 console.log( A, B ); // { name: 'Rubesh', age: 23 } {}
 
+//---------------------------------------------------------------------------------------------------------------------------
+
+// we can also able to copy an object or an array instead of referencing it, we need to create a separate copy
+// Using the spread operator (...)
+
+let object1 = {
+    school: "SDA",
+    'Number Of Students': 1000,
+};
+let object2 = { ...object1 }; // by useing the spread operator {...} we are creating a copy of object1 in object2 
+
+console.log( object1, object2 ); // { school: 'SDA', 'Number Of Students': 1000 } { school: 'SDA', 'Number Of Students': 1000 }
+
+object2.school = "DKS"; // Changing the copied value {object2} will not change the original value (object1)
+console.log( object1, object2 );
+
+//---------------------------------------------------------------------------------------------------------------------------
 
 /* Assigning a object to Const variable */
 
@@ -67,6 +87,7 @@ console.log( object ); // { food: 'Briyani', place: 'Gudiyatham', time: 12 }
 object.time = 1;
 console.log( object ); // { food: 'Briyani', place: 'Gudiyatham', time: 1 }
 
+//---------------------------------------------------------------------------------------------------------------------------
 
 /* Garbage Collection  */
 // JavaScript automatically manages memory allocation and deallocation using Garbage Collection (GC). 
@@ -84,7 +105,7 @@ console.log( garbage ); // null
 // here the oject becomes null and its memory was erased , but the object will be there
 // so the JavaScript engine removes objects from memory when they are no longer needed.
 
-
+//---------------------------------------------------------------------------------------------------------------------------
 
 /* Triva Question to find the answer for the following code */
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div style="text-align: center; padding: 50px; margin: 50px;">
+    <div style="padding-bottom: 20px;">
+        <label for="input">Input:</label>
+        <input type="text" id="input" placeholder="enter the number"> <br />
+    </div>
+    <div style="padding-bottom: 20px;">
+        <label for="input">Enter No of Rows:</label>
+        <input type="text" id="rows" placeholder="enter number of rows"> <br />
+    </div>
+
+    <button onclick="submit()">Submit</button>
+    <p id="answer"></p>
+</div>
+
+
+
+<body>
+
+</body>
+<script>
+    function submit () {
+        let input = document.getElementById( "input" ).value;
+        let rows = document.getElementById( "rows" ).value;
+        let answer = document.getElementById( "answer" );
+        answer.innerHTML = "";
+
+        for ( let i = 1; i <= rows; i++ ) {
+            let str = "";
+            for ( let j = 1; j <= i; j++ ) {
+                str += input;
+            }
+            answer.innerHTML += str + "<br>";
+        }
+    }
+
+</script>
+
+</html>
