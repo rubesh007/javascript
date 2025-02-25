@@ -39,18 +39,78 @@ let info = {
 
 // to access only the key of the property use,
 
-for ( key in info ) { // each time the loop runs it will give the key present in the object one after another
-    //console.log( key );
+for ( key in info ) { // each time the loop runs it will give only the key present in the object one after another
+    // console.log( key );
+    /* 
+        name
+        age
+        profession
+        Monthly Salary 
+    */
 }
 
-// to access only the value of the key
+// to access only the value of the key use objectName[key]
 
-for ( key in info ) { // each time the loop runs it will give the value present in the object one after another
-    //console.log( info[ key ] );
+for ( key in info ) { // each time the loop runs it will only give the value present in the object one after another
+    // console.log( info[ key ] );
+    /* 
+        Ashwini
+        23
+        .net Developer
+        22000
+    */
 }
 
 // to access both the key and the value of the property in object use
 
 for ( key in info ) { // each time the loop runs it will give the key  and Value present in the object one after another
     console.log( key + ':' + info[ key ] );
+    /* 
+        name:Ashwini
+        age:23
+        profession:.net Developer
+        Monthly Salary:22000 
+    */
+}
+
+
+/* Nested Object */
+
+let a = { //object
+    b: {
+        c: {
+            leght: 112,
+            width: 123
+        }
+    }
+
+};
+
+// object a -> key:b, value: enitre c
+// object b-> key:c , value : c oda entire object 
+// object c -> key: lehgth, width, value : 112,123
+
+for ( key in a ) {
+    console.log( key ); // key of a is b
+}
+
+for ( key in a ) {
+    console.log( a[ key ] ); // valuepair of a's key { c: { leght: 112, width: 123 } }
+}
+
+for ( key in a.b ) {
+    console.log( key ); //  key of b is c
+}
+
+for ( key in a.b ) {
+    console.log( a.b[ key ] ); // value pair b's key is { leght: 112, width: 123 }
+}
+
+for ( key in a.b.c ) {
+    console.log( key ); // key of c is leght,width
+}
+
+for ( key in a.b.c ) {
+    console.log( a.b.c[ key ] ); // value pair of c's key is 112,123
+
 }

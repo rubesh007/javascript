@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="text-align: center; padding: 50px; margin: 50px;">
+
+        <div>
+            <input type="number" placeholder="Enter the number" id="input">
+            <button onclick="ADD()">ADD</button>
+            <button onclick="submitHandler()">Submit</button>
+            <button onclick="Clears()">Clear</button>
+        </div>
+
+        <p id="answer"></p>
+        <p id="answers"></p>
+        <h3 id="error" style="color: red;"></h3>
+
+        <table border="1" id="resultTable" style="margin: auto; width: 30%; display: none;">
+            <thead>
+                <tr>
+                    <th style="color: blue;">First Half</th>
+                    <th style="color: green;">Second Half</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+
+    </div>
+
+    <script>
+        let array = [];
+
+        function ADD () {
+            let input = document.getElementById( "input" ).value;
+            let result = document.getElementById( 'answer' );
+            let error = document.getElementById( 'error' );
+
+            if ( input === "" || isNaN( input ) || input <= 0 ) {
+                error.innerText = "Please enter a valid positive number.";
+                return;
+            }
+
+            error.innerText = "";
+            array.push( Number( input ) );
+            result.innerHTML = array.join( '<br/>' );
+            Clr();
+        }
+
+        function submitHandler () {
+            let result = document.getElementById( 'answers' );
+            let error = document.getElementById( 'error' );
+            let tableBody = document.getElementById( 'tableBody' );
+            let resultTable = document.getElementById( 'resultTable' );
+
+            if ( array.length === 0 ) {
+                error.innerText = "Please add numbers before submitting.";
+                return;
+            }
+
+            error.innerText = "";
+            result.innerHTML = array.join( "," );
+
+            resultTable.style.display = "table";
+            tableBody.innerHTML = "";
+
+            let firstHalfSize = Math.ceil( array.length / 2 );
+            let firstHalf = array.slice( 0, firstHalfSize );
+            let secondHalf = array.slice( firstHalfSize );
+
+            let maxLength = Math.max( firstHalf.length, secondHalf.length );
+            for ( let i = 0; i < maxLength; i++ ) {
+                let row = document.createElement( "tr" );
+                let firstCell = document.createElement( "td" );
+                let secondCell = document.createElement( "td" );
+
+                firstCell.innerHTML = firstHalf[ i ] !== undefined ? firstHalf[ i ] : "N/A";
+                secondCell.innerHTML = secondHalf[ i ] !== undefined ? secondHalf[ i ] : "N/A";
+
+                row.appendChild( firstCell );
+                row.appendChild( secondCell );
+                tableBody.appendChild( row );
+            }
+
+            array = [];
+        }
+
+        function Clr () {
+            document.getElementById( "input" ).value = "";
+        }
+
+        function Clears () {
+            document.getElementById( 'answer' ).innerText = "";
+            document.getElementById( 'answers' ).innerText = "";
+            document.getElementById( 'error' ).innerText = "";
+            document.getElementById( 'tableBody' ).innerHTML = "";
+            document.getElementById( 'resultTable' ).style.display = "none";
+            array = [];
+        }
+    </script>
+</body>
+
+</html>
