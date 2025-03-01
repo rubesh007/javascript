@@ -50,10 +50,10 @@ function Information ( a ) {
 }
 
 let rubesh = new Information( 'Rubesh' );
-// we are calling the constructor function User and Storing it in the variable 
+// we are calling the constructor function Information and Storing it in the variable 
 // new keyword Creates an a new object called Information --> current object
 let Ashwini = new Information( 'Ashwini' );
-// we are calling the constructor function User and Storing it in the variable 
+// we are calling the constructor function Information and Storing it in the variable 
 // new keyword Creates an a new object called Information --> current object
 
 console.log( rubesh.surname = "kumar" );
