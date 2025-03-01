@@ -10,7 +10,7 @@
 // we should declare Map by using the constructor method
 
 let map = new Map();
-console.log( map );
+console.log( map ); // map(0) {}
 
 /* Inserting Data in Map  */
 
@@ -131,5 +131,21 @@ for ( key of myMap.values() ) {
         23
         Software Developer
         false
+    */
+}
+
+/* Accessing the entire map */
+// to access the entire map MapName
+// it will access the entire map
+
+for ( key of myMap ) {
+    // here values() is a inbuilt function or method to access the values of the Map
+    // it will access all the values in the map and returns it to the key
+    // we are printing the key
+    console.log( key );
+    /*  [ 'name', 'Rubesh' ]
+        [ 'Age', 23 ]
+        [ 'profession', 'Software Developer' ]
+        [ 'isMarried', false ]
     */
 }

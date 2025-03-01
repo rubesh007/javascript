@@ -29,6 +29,7 @@ IsAdult = String(IsAdult)
 console.log("After conversion = ",typeof IsAdult)
 console.log("After conversion = ", IsAdult)
 
+
 /* {NUMBER CONVERSION} */
 
 /* Converting String DataType To Number DataType */
@@ -50,6 +51,7 @@ console.log("Before conversion = ", Ismajor)
 Ismajor = Number(Ismajor)
 console.log("After conversion = ",typeof Ismajor)
 console.log("After conversion = ", Ismajor)
+
 
 /* {BOOLEAN CONVERSION} */
 
